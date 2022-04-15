@@ -1,0 +1,6 @@
+# Get user input
+big_exam_halls = int(input("How many big exam halls? "))
+small_exam_halls = int(input("How many small exam halls? "))
+
+# Calculate number of classes
+print("Number of classes = ", int((big_exam_halls*45 + small_exam_halls*22) // 25))
