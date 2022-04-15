@@ -1,0 +1,51 @@
+# get user input for integers
+a = int(input("Integer 1? "))
+b = int(input("Integer 2? "))
+c = int(input("Integer 3? "))
+
+# find the largest variable
+if a > b:
+    # if b is greater than a then do not run this v
+    # a is greater than b
+    if a > c:
+        largest = a
+        # a is greater than b AND c
+    else:
+        # c is greater than a AND b
+        largest = c
+elif b > c:
+    # b is greater than c
+    largest = b
+else:
+    # c is greater than b
+    largest = c
+
+# find the smallest variable
+if a < b:
+    # if b is less than a then do not run this v
+    # a is less than b
+    if a < c:
+        smallest = a
+        # a is less than b AND c
+    else:
+        # c is less than a AND b
+        smallest = c
+elif b < c:
+    # b is less than c
+    smallest = b
+else:
+    # c is less than b
+    smallest = c
+
+# print sorted in descending order
+print("Sorted: ",largest, end = " ", sep=" ")
+
+# find the middle
+if (largest == a or largest == b) and (smallest == a or smallest == b):
+    print(c, end = " ")
+elif (largest == a or largest == c) and (smallest == a or smallest == c):
+    print(b, end = " ")
+else:
+    print(a, end = " ")
+
+print(smallest)
