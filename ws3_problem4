@@ -1,0 +1,25 @@
+# variables
+base_wage = 36.25
+overtime_wage = base_wage * 1.5
+car_commission = 200
+commissioned_cars = 0
+overtime_hours = 0
+
+# get user input
+hours_worked = int(input("How many hours were worked? "))
+total_cars_sold = int(input("Total number of cars sold for the week? "))
+
+# calculate overtime
+if hours_worked > 37:
+    overtime_hours = hours_worked - 37
+    hours_worked = 37
+
+# calculate bonus
+if total_cars_sold > 5:
+    commissioned_cars = total_cars_sold - 5
+
+# calculate pay
+pay = (base_wage * hours_worked) + (overtime_hours * overtime_wage) + (commissioned_cars * car_commission)
+
+# output the car dealer's total salary of the week
+print("The salary is", pay)
