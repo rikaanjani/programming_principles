@@ -1,0 +1,8 @@
+# Get user input
+hours_worked_daily = float(input("Number of hours worked per day: "))
+days_worked_weekly = float(input("Number of days worked in a week: "))
+annual_salary = float(input("Annual salary: "))
+
+# Calculate hourly wage
+hourly_wage = annual_salary/52/days_worked_weekly/hours_worked_daily
+print("Hourly wage = ", hourly_wage)
